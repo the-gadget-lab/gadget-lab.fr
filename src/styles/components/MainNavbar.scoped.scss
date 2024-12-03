@@ -1,0 +1,163 @@
+$color-1: #07234b;
+$color-2: #67a3e5;
+$color-4: rgb(239, 247, 255);
+$color-5: rgb(167, 179, 201);
+$color-6: #8991ad;
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: $color-4;
+    font-weight: 600;
+    box-shadow: 0 2px 20px 1px rgba(#000000, 0.2);
+    @media (min-width: 768px){
+        justify-content: center;
+    }
+}
+
+.navbar-toggler {
+    display: none;
+    @media (max-width: 768px) {
+        margin-left: 80vw;
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .toggler-bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: $color-2;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+    }
+    &.toggled {
+        background-color: $color-1;
+        .toggler-bar {
+            &:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.navbarCollapse {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 768px) {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        text-align: center;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 1rem;
+        &.show {
+            display: flex;
+        }
+    }
+}
+
+.navbarNav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: 250px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.navItem {
+    margin-right: 40px;
+    font-size: large;
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-top: 20px;
+        margin-right: 0;
+    }
+}
+
+.navItem:last-child {
+    margin-right: 0;
+}
+
+.navLink {
+    text-decoration: none;
+    color: $color-6;
+    &:hover {
+        color: $color-1;
+    }
+    &.home {
+        color: $color-1;
+        padding: 15px;
+        border-radius: 50px;
+        margin-right: 50vw;
+        transition: .3s;
+        box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+              -7px -7px 20px rgb(255, 255, 255),
+              inset 0px 0px 4px rgba(255, 255, 255, .2),
+              inset 7px 7px 15px rgba(55, 84, 170, 0),
+              inset -7px -7px 20px rgba(255, 255, 255, 0),
+              0px 0px 4px rgba(255, 255, 255, .4);
+        &:hover {
+            padding: 16px;
+            font-size: 17px;
+            box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+              -7px -7px 20px rgba(255, 255, 255, 1),
+              inset 0px 0px 4px rgba(255, 255, 255, 0),
+              inset 7px 7px 15px rgba(55, 84, 170, .15),
+              inset -7px -7px 20px rgba(255, 255, 255, 1),
+              0px 0px 4px rgba(255, 255, 255, .2);
+        }
+    }
+    &.contact {
+        color: $color-1;
+        padding: 15px;
+        border-radius: 50px;
+        transition: .3s;
+        box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+              -7px -7px 20px rgb(252, 253, 255),
+              inset 0px 0px 4px rgba(255, 255, 255, .2),
+              inset 7px 7px 15px rgba(55, 84, 170, 0),
+              inset -7px -7px 20px rgba(255, 255, 255, 0),
+              0px 0px 4px rgba(255, 255, 255, .4);
+        &:hover {
+            color: $color-1;
+            font-size: 17px;
+            padding: 16px;
+            box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+              -7px -7px 20px rgba(255, 255, 255, 1),
+              inset 0px 0px 4px rgba(255, 255, 255, 0),
+              inset 7px 7px 15px rgba(55, 84, 170, .15),
+              inset -7px -7px 20px rgba(255, 255, 255, 1),
+              0px 0px 4px rgba(255, 255, 255, .2);
+        }
+    }
+    @media (max-width: 768px) {
+        padding: 10px 15px;
+        color: $color-1;
+        text-align: left;
+        &.home, &.contact {
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+    }
+}

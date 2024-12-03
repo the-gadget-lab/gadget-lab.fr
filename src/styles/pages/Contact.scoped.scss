@@ -1,0 +1,45 @@
+$color-1: #07234b;
+// $color-2: #67a3e5;
+$color-2: #4292c7;
+$color-3: #e0ecfb;
+$color-4: rgb(239, 247, 255);
+$color-5: rgb(167, 179, 201);
+
+.contactContainer {
+    height: 100vh;
+}
+.contactContainer>.container>h1 {
+    margin: 40px;
+    font-size: 55px;
+    text-align: center;
+}
+.contactButtonContainer>button {
+    background: white;
+    color: $color-2;
+    width: 10%;
+    height: 40px;
+    margin-top: 20px !important;
+    border-radius: 5px !important;
+    font-size: 20px;
+    border: none;
+}
+button:hover {
+    color: white;
+    background: $color-2;
+}
+.contactContainer>h1 {
+    text-align: center;
+}
+
+@media (max-width: 750px) {
+    .contactContainer {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .contactButtonContainer>button {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 80px;
+    }
+}

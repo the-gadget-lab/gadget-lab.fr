@@ -1,0 +1,128 @@
+$color-1: #07234b;
+// $color-2: #67a3e5;
+$color-2: #4292c7;
+$color-3: #e0ecfb;
+
+.teamContainer {
+    background-color: $color-3;
+    display: flex;
+    flex-direction: column;
+}
+.teamCardsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.teamContainer>h1 {
+    font-size: 55px;
+    text-align: center;
+    margin: 40px;
+}
+.imgProfile {
+    width: 300px;
+    border-radius: 50%;
+}
+.lancelot, .lokman, .lokman2 {
+    display: flex;
+    margin: 40px;
+    margin-top: 0;
+    border-radius: 20px;
+    padding: 20px;
+    width: 70%;
+    background-color: $color-3;
+    // box-shadow: inset 0px 0px 10px black;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+              -7px -7px 20px rgb(255, 255, 255),
+              inset 0px 0px 4px rgba(255, 255, 255, .2),
+              inset 7px 7px 15px rgba(55, 84, 170, 0),
+              inset -7px -7px 20px rgba(255, 255, 255, 0),
+              0px 0px 4px rgba(255, 255, 255, 0);
+}
+.lokman {
+    align-self: flex-end;
+}
+.lokman>h3 {
+    text-align: right;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text {
+    text-align: justify;
+    padding: 20px;
+}
+.lokman>.text>h3 {
+    align-self: flex-end;
+}
+.lokman2 {
+    display: none;
+}
+
+.teamContainer .text p + p {
+    display: none; // Hide the second paragraph by default
+}
+  
+  .teamContainer .text button {
+    display: block; // Show the toggle button by default
+}
+  
+
+@media (max-width: 750px) {
+    .imgProfile {
+        width: 200px;
+    }
+    .lancelot, .lokman2 {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 90%;
+    }
+    .text {
+        text-align: left;
+    }
+    .lokman {
+        display: none;
+    }
+    .text>h3 {
+        text-align: center;
+    }
+    .read-more {
+        width: 100px;
+        align-self: center;
+    }
+    .show-less {
+        align-self: left;
+        opacity: .5;
+        bottom: 25%;
+        height: 60px;
+        width: 70px;
+        display: none !important;
+    }
+    .show-less:hover {
+        background-color: $color-2;
+        opacity: 1;
+        color: white;
+    }
+    .read-more {
+        background-color: $color-3;
+        border-radius: 25px;
+        border: 2px solid $color-2;
+        color: $color-2;
+    }
+}
+
+@media screen and (min-width: 751px) {
+    .teamContainer .text p + p {
+      display: block; // Show the second paragraph on larger screens
+    }
+  
+    .teamContainer .text button {
+      display: none; // Hide the toggle button on larger screens
+    }
+  }

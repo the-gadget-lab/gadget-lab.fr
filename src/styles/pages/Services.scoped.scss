@@ -1,0 +1,128 @@
+$color-1: #07234b;
+// $color-2: #67a3e5;
+$color-2: #4292c7;
+$color-3: #e0ecfb;
+
+html, body {
+    height: 100%;
+    margin: 0;
+}  
+.services {
+text-align: center;
+font-size: 35px;
+height: 100%;
+background-color: $color-3;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+}
+.services>h1 {
+    font-size: 55px !important;
+    margin: 40px !important;
+}
+.serviceCard>h2 {
+    font-size: 35px;
+    color: $color-2;
+}
+p {
+    font-size: 20px;
+}
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    text-align: justify;
+    margin: 20px;
+    padding: 40px;
+    color: $color-2;
+    border-radius: 20px;
+    gap: 50px;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+              -7px -7px 20px rgb(243, 247, 252),
+              inset 0px 0px 4px rgba(255, 255, 255, .2),
+              inset 7px 7px 15px rgba(55, 84, 170, 0),
+              inset -7px -7px 20px rgba(255, 255, 255, 0),
+              0px 0px 4px rgba(255, 255, 255, 0);
+}
+.serviceCard>img {
+    border-radius: 100%;
+    width: 100px;
+    box-shadow: 7px 7px 10px rgba(55, 84, 170, .5),
+              -7px -7px 5px rgb(255, 255, 255);
+}
+.hrServices {
+    width: 50%;
+    height: 0px;
+    border: none;
+    border-top: 1px solid $color-2;
+}
+.spanServices {
+    font-weight: bolder;
+}
+p {
+    height: 100px;
+}
+.servicesText>p, .servicesText2>p {
+    margin-bottom: 70px;
+}
+
+  
+@media screen and (max-width: 750px) {
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .serviceCard {
+        width: 90%;
+        padding: 20px;
+        min-height: 500px;
+        text-align: center;
+    }
+    .serviceCard>button {
+        border-radius: 50px;
+        background: $color-2;
+        color: white;
+        border: none;
+    }
+    .spanServices {
+        font-size: 20px;
+    }
+    .servicesText>p {
+        margin-top: 150px;
+        min-height: 200px;
+        text-align: left;
+    }
+    .servicesText2>p {
+        margin-top: 150px;
+        min-height: 250px;
+        text-align: left;
+    }
+    .serviceCard>button {
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        margin-top: 150px !important;
+    }
+
+    .serviceCard .spanServices + div {
+        display: none; // Hide the additional content on small screens
+    }
+
+    .serviceCard button {
+        display: block; // Show the toggle button on small screens
+    }
+    }
+
+    @media screen and (min-width: 751px) {
+    .serviceCard .spanServices + div {
+        display: block; // Always show the full content on large screens
+    }
+
+    .serviceCard button {
+        display: none; // Hide the toggle button on large screens
+    }
+}

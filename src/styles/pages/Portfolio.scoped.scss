@@ -1,0 +1,130 @@
+$color-1: #07234b;
+// $color-2: #67a3e5;
+$color-2: #4292c7;
+$color-3: #e0ecfb;
+
+:root {
+    --primary-color: #07234b; /* dark purple */
+    --background-color: $color-3; /* light gray */
+    --text-color: #333; /* dark gray */
+    --nav-hover-color: #ddd; /* light gray for hover state */
+    --nav-active-color: #bbb; /* medium gray for active state */
+    --nav-border-color: #333; /* dark gray for border */
+    --content-background-color: $color-3; /* white */
+    --content-border-color: #ddd; /* light gray for borders */
+  }
+  .portfolioContainer {
+    background-color: $color-3;
+    height: 100vh;
+  }
+  
+  .portfolioWrapper {
+    max-width: 75vw;
+    margin: 5vh auto;
+    color: $color-2;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .portfolioTitle {
+    text-align: center;
+    font-size: 55px;
+    margin: 40px !important;
+  }
+  
+  .portfolioNav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: $color-3;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+              -7px -7px 20px rgb(243, 247, 252),
+              inset 0px 0px 4px rgba(255, 255, 255, .2),
+              inset 7px 7px 15px rgba(55, 84, 170, 0),
+              inset -7px -7px 20px rgba(255, 255, 255, 0),
+              0px 0px 4px rgba(255, 255, 255, 0);
+    margin-bottom: 50px;
+  }
+  
+  .portfolioNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .portfolioNav li {
+    margin: 0 10px;
+  }
+  
+  .portfolioContentArea {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .portfolioImage {
+    flex-basis: 40%;
+    margin-right: 20px;
+  }
+  
+  .portfolioImage>img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .portfolioContent {
+    flex-basis: 60%;
+    background-color: var(--content-background-color);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .carousel-control-next {
+    border-radius: 6px;
+    background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,1)) !important;
+  }
+  .carousel-control-prev {
+    border-radius: 6px;
+    background: linear-gradient(-90deg, rgba(0,0,0,0), rgba(0,0,0,1)) !important;
+  }
+  
+  @media (max-width: 768px) {
+    .portfolioWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .portfolioContentArea {
+      flex-direction: column;
+    }
+  
+    .portfolioImage {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    .portfolioNav {
+      margin-bottom: 20px;
+      width: 95vw;
+    }
+
+    .carousel-inner {
+      height: auto;
+    }
+    .card-img {
+      height: auto;
+      object-fit: fill;
+    }
+  
+    .portfolioNav li {
+      margin: 5px 0;
+    }
+
+    .carousel-indicators>button {
+      display: none;
+    }
+  }
+  
